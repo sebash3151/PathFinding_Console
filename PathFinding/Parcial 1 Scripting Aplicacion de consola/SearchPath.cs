@@ -58,6 +58,10 @@ namespace Parcial_1_Scripting_Aplicacion_de_consola
         private Node startPoint;
         private Node endPoint;
 
+        //Hueco
+        Vector2 heuco1 = new Vector2();
+        int equis, ye;
+
         //Direcciones posibles a recorrer
         private Vector2[] directions = { new Vector2(0, 1), new Vector2(0, -1), new Vector2(1, 0), new Vector2(-1, 0) };
 
@@ -114,10 +118,13 @@ namespace Parcial_1_Scripting_Aplicacion_de_consola
                 {
                     Console.WriteLine("Escriba valores dentro del limite establecido");
                 }
+                if (xinicio == yinicio && xfinal == yinicio)
+                {
+                    Console.WriteLine("El valor del inicio y el final son iguales, escriba valores adecuados");
+                }
 
-            } while (xinicio < 0 || xfinal < 0 || yinicio < 0 || yfinal < 0||xinicio>tamaño || yinicio > tamaño || xfinal > tamaño || xfinal > tamaño);
-            
-          
+            } while ((xinicio < 0 || xfinal < 0 || yinicio < 0 || yfinal < 0||xinicio>tamaño || yinicio > tamaño || xfinal > tamaño || xfinal > tamaño)||(xinicio == yinicio && xfinal == yinicio));
+                      
             Vector2 inicio = new Vector2(xinicio, yinicio);
             Vector2 final = new Vector2(xfinal, yfinal);
             inifina.Add(inicio, 1);
@@ -129,47 +136,33 @@ namespace Parcial_1_Scripting_Aplicacion_de_consola
             int cantidadDeHuecos = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= cantidadDeHuecos; i++)
-            {            
-                Console.WriteLine("Escriba la coordenada X del hueco: " + i);
-                int equis = int.Parse(Console.ReadLine());
-                Console.WriteLine("Escriba la coordenada Y del hueco: " + i);
-                int ye = int.Parse(Console.ReadLine());
-
-                Vector2 heuco1 = new Vector2(equis, ye);
-
-                if (diccionario.ContainsKey(heuco1))
+            {
+                do
                 {
-                    diccionario.Remove(heuco1);
-                    huecos.Add(heuco1, 1);
-                }
+                    Console.WriteLine("Escriba la coordenada X del hueco: " + i);
+                    equis = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Escriba la coordenada Y del hueco: " + i);
+                    ye = int.Parse(Console.ReadLine());
+
+                    heuco1 = new Vector2(equis, ye);
+
+                    if (equis < 0 || ye < 0 || equis > tamaño || ye > tamaño)
+                    {
+                        Console.WriteLine("Escriba valores dentro del limite establecido");
+                    }
+                    else if (inifina.ContainsKey(heuco1))
+                    {
+                        Console.WriteLine("Ingreso un hueco en una ubicacion en el espacio del inicio o del final, porfavor ingrese un valor valido");
+                    }
+                    else if (diccionario.ContainsKey(heuco1))
+                    {
+                        diccionario.Remove(heuco1);
+                        huecos.Add(heuco1, 1);
+                    }
+                } while (inifina.ContainsKey(heuco1) || equis < 0 || ye < 0 || equis > tamaño || ye > tamaño);
             }
             Console.WriteLine("Laberinto: ");
-            for (int i = 0; i < tamaño; i++)
-            {                
-                for (int j = 0; j < tamaño; j++)
-                {
-                    Vector2 dibujo = new Vector2(j, i);
-                    if (inifina.ContainsKey(dibujo))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("H");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                    }
-                    else if (diccionario.ContainsKey(dibujo))
-                    {
-                        Console.Write("O");
-                    }
-                    else if (huecos.ContainsKey(dibujo))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("X");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                    }
-                }
-                Console.WriteLine("");
-            }
-
-
+            DibujarMaze();
         }
 
         public void BFS()
@@ -244,6 +237,11 @@ namespace Parcial_1_Scripting_Aplicacion_de_consola
             {
                 Console.WriteLine(path[i].GetPosition());
             }
+            DibujarMaze();
+        }
+
+        public void DibujarMaze()
+        {
             for (int i = 0; i < tamaño; i++)
             {
                 for (int j = 0; j < tamaño; j++)

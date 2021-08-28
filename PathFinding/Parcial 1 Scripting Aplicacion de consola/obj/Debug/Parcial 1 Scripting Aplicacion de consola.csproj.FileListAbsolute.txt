@@ -12,3 +12,10 @@ E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\Parcial 1 Scripting Ap
 E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.csproj.CoreCompileInputs.cache
 E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.exe
 E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.pdb
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\bin\Debug\Parcial 1 Scripting Aplicacion de consola.exe.config
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\bin\Debug\Parcial 1 Scripting Aplicacion de consola.exe
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\bin\Debug\Parcial 1 Scripting Aplicacion de consola.pdb
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.csprojAssemblyReference.cache
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.csproj.CoreCompileInputs.cache
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.exe
+E:\IDED\Semestre 6\Scripting\Parcial1\PathFinding_Console\PathFinding\Parcial 1 Scripting Aplicacion de consola\obj\Debug\Parcial 1 Scripting Aplicacion de consola.pdb
